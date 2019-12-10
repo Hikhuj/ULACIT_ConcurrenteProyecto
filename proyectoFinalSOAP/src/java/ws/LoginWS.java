@@ -8,6 +8,9 @@ package ws;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import com.proyecto.dao.ClienteDAO;
+import com.clasesprogramaejemplos.Cliente;
+import java.util.List;
 
 /**
  *
@@ -16,7 +19,7 @@ import javax.jws.WebParam;
 @WebService(serviceName = "LoginWS")
 public class LoginWS {
 
-    
+    private static List<Cliente> listaClientes = ClienteDAO.getClientes();
     
     /**
      * This is a sample web service operation
@@ -33,7 +36,11 @@ public class LoginWS {
     @WebMethod(operationName = "mainLogin")
     public boolean loginCredentials(@WebParam(name = "usuario") String usuario, @WebParam(name = "contrasenia") String contrasenia){
         
+        
+        
         boolean result = true;
+        
+        
         
         if(usuario.isEmpty() && contrasenia.isEmpty()){
             result = false;

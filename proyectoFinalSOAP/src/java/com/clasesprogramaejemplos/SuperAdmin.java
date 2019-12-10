@@ -1,4 +1,4 @@
-package ClasesPrograma;
+package com.clasesprogramaejemplos;
 
 public class SuperAdmin extends Empleado {
 
