@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcuClientServer/proyectoFinalSOAP/proyectoFinalSOAP/src/java/ClasesPrograma/Factura.java</file>
-            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcuClientServer/proyectoFinalSOAP/proyectoFinalSOAP/src/java/ClasesPrograma/ClienteProyectoFinalSOAP.java</file>
-            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcuClientServer/proyectoFinalSOAP/proyectoFinalSOAP/src/java/ws/LoginWS.java</file>
-            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcuClientServer/proyectoFinalSOAP/proyectoFinalSOAP/src/java/ClasesPrograma/Articulo.java</file>
+            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcurrenteProyecto/proyectoFinalSOAP/src/java/com/clasesprogramaejemplos/ClienteProyectoFinalSOAP.java</file>
+            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcurrenteProyecto/proyectoFinalSOAP/src/java/ws/LoginWS.java</file>
+            <file>file:/C:/Users/roger/Documents/PersonalRepos/ULACIT_ConcurrenteProyecto/proyectoFinalSOAP/src/java/com/proyecto/dao/ArticuloDAO.java</file>
         </group>
     </open-files>
 </project-private>
