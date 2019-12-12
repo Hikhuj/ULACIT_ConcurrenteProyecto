@@ -1,6 +1,7 @@
 
 package ws;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -29,14 +30,14 @@ public interface LoginWS {
      * @param usuario
      * @param contrasenia
      * @return
-     *     returns boolean
+     *     returns java.util.List<java.lang.String>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "mainLogin", targetNamespace = "http://ws/", className = "ws.MainLogin")
     @ResponseWrapper(localName = "mainLoginResponse", targetNamespace = "http://ws/", className = "ws.MainLoginResponse")
     @Action(input = "http://ws/LoginWS/mainLoginRequest", output = "http://ws/LoginWS/mainLoginResponse")
-    public boolean mainLogin(
+    public List<String> mainLogin(
         @WebParam(name = "usuario", targetNamespace = "")
         String usuario,
         @WebParam(name = "contrasenia", targetNamespace = "")

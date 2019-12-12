@@ -63,12 +63,12 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(jbl_welcome_description, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
 
         jbl_user.setText("Usuario:");
-        jPanel2.add(jbl_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+        jPanel2.add(jbl_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
 
         jbl_password.setText("Contraseña:");
-        jPanel2.add(jbl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
-        jPanel2.add(jTxt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 140, -1));
-        jPanel2.add(jTxt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 140, -1));
+        jPanel2.add(jbl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
+        jPanel2.add(jTxt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 140, -1));
+        jPanel2.add(jTxt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 140, -1));
 
         btn_ingresar.setText("Ingresar");
         btn_ingresar.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +84,12 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
-        // TODO add your handling code here:
+        
+        String usuario = jTxt_user.getText();
+        String contrasenia = jTxt_password.getText();
+        
+        String [] resultados = login.mainLogin(usuario, contrasenia);
+        
     }//GEN-LAST:event_btn_ingresarActionPerformed
 
     /**

@@ -32,37 +32,39 @@ public class LoginWS {
         Servicio web de login
     */
     @WebMethod(operationName = "mainLogin")
-    public boolean loginCredentials(@WebParam(name = "usuario") String usuario, @WebParam(name = "contrasenia") String contrasenia){
+    public String[] loginCredentials(@WebParam(name = "usuario") String usuario, @WebParam(name = "contrasenia") String contrasenia){
         
         // Evaluar si usuario es valido o no.
         
-        String result[] = new String(2);
-        
-        boolean result = false;
+        String [] result = new String[2];
         
         for(Empleado e : listaEmpleado){
             if(e instanceof Empleado){
                 // Empleado emp = (Empleado) e;
                 if(e.getUsuario().equals(usuario) && e.getContrasenia().equals(contrasenia)){
-                    result = true;
+                    result[0] = "true";
+                    result[1] = "empleado";
                     break;
                 }
             }else if(e instanceof SuperAdmin){
                 SuperAdmin emp = (SuperAdmin) e;
                 if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
-                    result = true;
+                    result[0] = "true";
+                    result[1] = "superAdmin";
                     break;
                 }
             }else if(e instanceof VendedorA){
                 VendedorA emp = (VendedorA) e;
                 if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
-                    result = true;
+                    result[0] = "true";
+                    result[1] = "vendedorA";
                     break;
                 }
             }else if(e instanceof VendedorB){
                 VendedorB emp = (VendedorB) e;
                 if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
-                    result = true;
+                    result[0] = "true";
+                    result[1] = "vendedorB";
                     break;
                 }
             }
