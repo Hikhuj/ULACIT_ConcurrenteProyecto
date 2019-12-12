@@ -23,7 +23,10 @@ import java.util.List;
 public class LoginWS {
 
     private static List<Empleado> listaEmpleado = EmpleadoDAO.getEmpleados();
-    Empleado empleado = new Empleado();
+    
+    // DEPRECATE
+    // Declarar e instanciar un objeto nuevo de tipo Empleado por ser la raiz de la clase (Parent)
+    // Empleado empleado = new Empleado();
     
     /*
         Servicio web de login
@@ -37,8 +40,8 @@ public class LoginWS {
         
         for(Empleado e : listaEmpleado){
             if(e instanceof Empleado){
-                Empleado emp = (Empleado) e;
-                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                // Empleado emp = (Empleado) e;
+                if(e.getUsuario().equals(usuario) && e.getContrasenia().equals(contrasenia)){
                     result = true;
                     break;
                 }
