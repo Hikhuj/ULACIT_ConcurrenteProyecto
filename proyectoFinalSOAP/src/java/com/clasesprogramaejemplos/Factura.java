@@ -1,4 +1,4 @@
-package ClasesPrograma;
+package com.clasesprogramaejemplos;
 
 //atributos
 public class Factura {

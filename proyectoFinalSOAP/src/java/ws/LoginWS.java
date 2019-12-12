@@ -8,6 +8,12 @@ package ws;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import com.proyecto.dao.EmpleadoDAO;
+import com.clasesprogramaejemplos.Empleado;
+import com.clasesprogramaejemplos.SuperAdmin;
+import com.clasesprogramaejemplos.VendedorA;
+import com.clasesprogramaejemplos.VendedorB;
+import java.util.List;
 
 /**
  *
@@ -16,16 +22,8 @@ import javax.jws.WebParam;
 @WebService(serviceName = "LoginWS")
 public class LoginWS {
 
-    
-    
-    /**
-     * This is a sample web service operation
-     
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
-    */
+    private static List<Empleado> listaEmpleado = EmpleadoDAO.getEmpleados();
+    Empleado empleado = new Empleado();
     
     /*
         Servicio web de login
@@ -33,10 +31,36 @@ public class LoginWS {
     @WebMethod(operationName = "mainLogin")
     public boolean loginCredentials(@WebParam(name = "usuario") String usuario, @WebParam(name = "contrasenia") String contrasenia){
         
-        boolean result = true;
+        // Evaluar si usuario es valido o no.
         
-        if(usuario.isEmpty() && contrasenia.isEmpty()){
-            result = false;
+        boolean result = false;
+        
+        for(Empleado e : listaEmpleado){
+            if(e instanceof Empleado){
+                Empleado emp = (Empleado) e;
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                    result = true;
+                    break;
+                }
+            }else if(e instanceof SuperAdmin){
+                SuperAdmin emp = (SuperAdmin) e;
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                    result = true;
+                    break;
+                }
+            }else if(e instanceof VendedorA){
+                VendedorA emp = (VendedorA) e;
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                    result = true;
+                    break;
+                }
+            }else if(e instanceof VendedorB){
+                VendedorB emp = (VendedorB) e;
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                    result = true;
+                    break;
+                }
+            }
         }
         
         return result;

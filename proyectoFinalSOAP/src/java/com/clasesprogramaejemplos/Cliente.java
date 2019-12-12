@@ -1,27 +1,23 @@
-package ClasesPrograma;
+package com.clasesprogramaejemplos;
 
-public class Empleado {
-    
+public class Cliente {
+
     //atributos
     private int id;
-    private String usuario;
-    private String contrasenia;
     private String nombre1;
-    private String nombre2; 
+    private String nombre2;
     private String apellido1;
     private String apellido2;
     private String email;
-    
-    
+
     //constructor vacio
-    public Empleado() {
+    public Cliente() {
     }
 
     //constructor normal
-    public Empleado(int id, String usuario, String contrasenia, String nombre1, String nombre2, String apellido1, String apellido2, String email) {
+    public Cliente(int id, String nombre1, String nombre2, String apellido1, String apellido2, String email) {
         this.id = id;
-        this.usuario = usuario;
-        this.contrasenia = contrasenia;
+
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
         this.apellido1 = apellido1;
@@ -29,28 +25,13 @@ public class Empleado {
         this.email = email;
     }
 
+    //getters y setters
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getContrasenia() {
-        return contrasenia;
-    }
-
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
     }
 
     public String getNombre1() {
@@ -93,11 +74,10 @@ public class Empleado {
         this.email = email;
     }
 
+    //toString
     @Override
     public String toString() {
-        return "Empleado{" + "id=" + id + ", usuario=" + usuario + ", contrasenia=" + contrasenia + ", nombre1=" + nombre1 + ", nombre2=" + nombre2 + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", email=" + email + '}';
+        return "Cliente{" + "id=" + id + ", usuario=" + ", nombre1=" + nombre1 + ", nombre2=" + nombre2 + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", email=" + email + '}';
     }
-    
-    
-    
+
 }
