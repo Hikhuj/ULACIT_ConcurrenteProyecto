@@ -36,6 +36,8 @@ public class LoginWS {
         
         // Evaluar si usuario es valido o no.
         
+        String result[] = new String(2);
+        
         boolean result = false;
         
         for(Empleado e : listaEmpleado){
