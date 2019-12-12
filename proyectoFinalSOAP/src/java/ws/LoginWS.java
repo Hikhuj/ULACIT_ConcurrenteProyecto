@@ -38,25 +38,25 @@ public class LoginWS {
         for(Empleado e : listaEmpleado){
             if(e instanceof Empleado){
                 Empleado emp = (Empleado) e;
-                if(emp.getEmail().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
                     result = true;
                     break;
                 }
             }else if(e instanceof SuperAdmin){
                 SuperAdmin emp = (SuperAdmin) e;
-                if(emp.getEmail().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
                     result = true;
                     break;
                 }
             }else if(e instanceof VendedorA){
                 VendedorA emp = (VendedorA) e;
-                if(emp.getEmail().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
                     result = true;
                     break;
                 }
             }else if(e instanceof VendedorB){
                 VendedorB emp = (VendedorB) e;
-                if(emp.getEmail().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
+                if(emp.getUsuario().equals(usuario) && emp.getContrasenia().equals(contrasenia)){
                     result = true;
                     break;
                 }
