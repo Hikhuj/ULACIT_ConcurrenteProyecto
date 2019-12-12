@@ -5,17 +5,31 @@
  */
 package View;
 
+import ws.LoginWS;
+import ws.LoginWS_Service;
+
 /**
  *
  * @author roger
  */
 public class Login extends javax.swing.JFrame {
 
+    // Generar el anclaje de la conexion
+    LoginWS_Service loginWS = new LoginWS_Service();
+    // llamar a la interfaz de ese Web Service creado
+    LoginWS login;
+    
+    
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        
+        // En el constructor (este) instanciar al WebService
+        // Instanciar el objeto que nos permite llamar a la interfaz
+        // para obtener los metodos
+        login = loginWS.getLoginWSPort();
     }
 
     /**
